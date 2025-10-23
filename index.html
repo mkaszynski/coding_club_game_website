@@ -37,21 +37,184 @@ a:active {
 color: yellow; /* Selected link */
 text-decoration: underline;
 }
+
+div.main {width: 75%; padding: 0 5% 0 0}
+
+div.sidebar {width: 20%; float: right; text-align: center}
+div.banner {width 100%; color: #FFFFFF; hight: 45px;
+background-image: url(color/banner.png);
+background-position: center; background-size: cover;
+font-family: Arial, Helvetica, sans-serif; font-size: 2em
+font-weight: bold; text-align: center; padding: 2% 2% 2% 2%}
+
+div.footer {width 100%; background: #000000; color: #FFFFFF;
+background-image: url(color/banner.png);
+font-family: Arial, Helvetica, sans-serif; font-size: 2em
+font-weight: bold; text-align: center; padding: 2% 2% 2% 2%}
+
+
+a.footer {font-family: Arial, Helvetica, sans-serif; font-size: 1em
+font-weight: bold; color: #AAFFFF; text-decoration: none}
+
+
+
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 </style>
+
+
+
+
+
+
+
+
+
+
 
 
 </head>
 <body>
 
-<center> 
-         
-<img  width="1880" height="150"  src="pics/banner.png"> 
+<div class="banner">
+<h1> <p>Welcome To The Kolbe Academy Coding Club Game Website.</p> </h1>
+</div>
+<div class="sidebar">
+<p> <h1> News </h1> </p>
+<h2> Version 1.25.4 released on October 22 2025 <h2>
+<h2> Version 1.25.3 released on October 22 2025 <h2>
+<h2> Version 1.25.2 released on October 22 2025 <h2>
+<h2> Version 1.25.1 released on October 21 2025 <h2>
+<h2> Version 1.25.0 released on October 21 2025 <h2>
+
+
+</div>
+
+
+
+        <div class="main">
+<center>
 <h1>
 <p style="color: red;"> Here you can play games made by People in the Kolbe Academy Codeing Club </h1> </p>
 
-</center>
 
-<img  width="500" height="315"  src="pics/logo-2231370860_5d83dc6b062a1.png">
+<h2>Popular Games</h2>
+</center>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="pics/Desktop Screenshot 2025.09.25 - 14.39.14.13.png" style="width:100%">
+  <div class="text"><h2><a href="Galactica game by Michael Kaszynski.html">Galactica Game Made By Michael Kaszynski </a>. </h2> </p> </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="pics/Screenshot_22-10-2025_11713_mkaszynski.github.io.jpeg" style="width:100%">
+  <div class="text"><h2><a href="run game by Michael Kaszynski.html">Star Runner Game Made By Michael Kaszynski </a>. </h2> </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="pics/2025-10-03-103628_1920x1080_scrot.png" style="width:100%">
+  <div class="text"><h2> <a href="gravity2 game by Michael Kaszynski.html">Gravity Game Made By Michael Kaszynski </a>. </h2> </p>
+</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
 
 
 <p> <h1> <a href="JavaScript games.html">JavaScript games </a>. </h1> </p>
@@ -59,26 +222,21 @@ text-decoration: underline;
 <p> <h1> <a href="Scratch games.html">Scratch games </a>. </h1> </p>
 <p> <h1> <a href="python code installer.html">How to install python </a>. </h1> </p>
 <p> <h1> <a href="seasonal games.html">Seasonal Games </a>. </h1> </p>
-<p> <h1> <a href="credits.html">Coding Club Game Website Credits</a>. </h1> </p>
+
 
 </p>
-
-
-
-<center>
-
-
- 
-<img  width="1880" height="80"  src="pics/Desktop Screenshot 2025.10.14 - 16.25.16.19.png"> 
+</div>
 
 
 
 
 
+<div class="footer"> 
+<p> <h2> © 2025 The Kolbe Academy Codeing Club Game Website. All rights reserved. <a href="credits.html">Coding Club Game Website Credits</a>. </h2> </p>
+
+</div>
 
 
-
-</center>
 </body>
 
 </html>
